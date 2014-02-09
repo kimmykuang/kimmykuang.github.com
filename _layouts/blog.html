@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<!-- blog模板定义了每篇文章的样式 -->
+<div class="main">
+	<!-- 文章内容 -->
+	<div class="article_content">
+		<h2 class="article_title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+		<p class="article_date">{{ page.date|date:"%Y-%m-%d" }}</p>
+		{{ content }}
+	</div>
+
+	<!-- 文章侧边栏目 -->
+	<div class="article_aside">
+
+	</div>
+
+	<!-- 文章评论 -->
+	<div class="article_comments">
+
+	</div>
+</div>
