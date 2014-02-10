@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- blog模板定义了每篇文章的样式 -->
-<div class="main">
+<div class="article_main">
 	<!-- 文章内容 -->
 	<div class="article_content">
 		<h2 class="article_title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h2>
@@ -21,3 +21,33 @@ layout: default
 
 	</div>
 </div>
+
+<style>
+.article_main {
+	width: 1060px;
+	margin: 90px auto 60px;
+	min-height: 400px;
+	height: auto !important;
+	height: 400px;
+}
+.article_content {
+	margin-bottom: 80px;
+	width: 680px;
+	float: left;
+	padding: 30px;
+	box-shadow: 0 2px 6px #ccc;
+}
+.article_title, .article_title a {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 6px;
+	text-align: center;
+	word-wrap: break-word;
+}
+.article_date {
+	text-align: center;
+	color: #FFFCFC;
+	margin-bottom: 60px;
+	font-size: 14px;
+}
+</style>
