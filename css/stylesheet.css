@@ -245,3 +245,8 @@ a {
 .cf {
   zoom:1;
 }
+
+/* article list */
+.article_list li {
+  margin-bottom: 70px;
+}
