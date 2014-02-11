@@ -31,12 +31,12 @@
 	font-size: 14px;
 }
 
-.shadow {
+html.boxshadow .shadow {
 	box-shadow: 0 2px 6px #ccc;
 	-moz-box-shadow: 0 2px 6px #ccc;
 	-webkit-box-shadow: 0 2px 6px #ccc;
-	/* For IE 8 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#ffffff')";
-    /* For IE 5.5 - 7 */
-    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#ffffff');
+}
+
+html.no-boxshadow .shadow{
+	border: 1px solid #ccc;
 }
