@@ -18,7 +18,7 @@
 	padding: 30px;
 	box-shadow: 0 2px 6px #ccc;
 }
-.article_title, .article_title a {
+.article_content .article_title, .article_content .article_title a {
 	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 6px;
