@@ -1,7 +1,8 @@
 baseurl: /
 permalink: /:title
+markdown: rdiscount
+
 author: KimmyKuang
 title: KimmyKuang's Blog
 email: kimmykuang@hotmail.com
-github: http://github.com/kimmykuang
-csdn: http://blog.csdn.net/kxxxxxxxb
+github: https://github.com/kimmykuang
