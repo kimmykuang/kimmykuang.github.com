@@ -1,6 +1,9 @@
 baseurl: /
-permalink: /:title
+permalink: /:title.html
+auto: true
 markdown: rdiscount
+paginate: 10
+
 
 author: KimmyKuang
 title: KimmyKuang's Blog
