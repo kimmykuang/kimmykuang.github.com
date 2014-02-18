@@ -6,7 +6,7 @@ description: 本地搭建一个Jekyll环境来测试和预览Github Blog，不�
 ---
 本地搭建一个Jekyll环境的好处是显而易见的：你不再需要重复地向github add / commit /push，在本地就可以预览和测试页面效果，是非常方便的一件事；你还可以一次性地调试好你的脚本、插件或者css效果，一口气写好多篇文章，本地确认没有问题后再提交到Github远程分支上。
 
-这里稍微记录一下在Windows平台安装配置Jekyll环境的过程和当中发生的问题。
+这里稍微记录一下在Windows平台安装配置Jekyll环境的过程和当中发生的问题。注意了，由于安装过程中发生了一些问题而且我也都记录了下来，所以本文不是一篇“教程”，直接照着我写的过程做的话是会绕点弯路的，但是修改起来也很简单，生命在于折腾嘛。
 
 ##配置ruby
 Jekyll是用ruby写的，所以先要配置ruby环境，由于我是初次接触ruby环境而且不是在Linux下，所以就不用二进制编译的方式了，直接下载ruby的安装包<a href="http://rubyinstaller.org" target="_blank">RubyInstaller</a>来配置了，我将其安装在<code>D:\ruby</code>路径下。记得安装的时候选上“Add Ruby executables to your PATH”（添加系统环境变量）。
@@ -45,7 +45,7 @@ jekyll 1.4.3
 
 [注意]：当前默认的jekyll版本是1.4.3，其实这个版本是有点问题的，反正我安装后运行<code>jekyll serve</code>总是提示莫名格式错误，所以到这里还没有结束呢，请继续看下去。
 
-##调试与问题汇总
+##本地调试
 安装好jekyll后就可以开始在本地搭建一个jekyll站点了，只要站点目录符合jekyll的基本结构。关于这部分内容可以参见我的另一篇文章：<a href="/github-blog.html" target="_blank">使用Github Pages建立个人博客</a> 中关于Jekyll模板系统的介绍。
 
 我本地的jekyll站点目录在<code>D:\wamp\www\git_blog</code>路径下，而且目录都已经配置好，所以直接开启ekyll自带的server：
