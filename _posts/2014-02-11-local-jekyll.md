@@ -94,3 +94,5 @@ D:\wamp\www\git_blog > gem install jekyll -v 1.2.1
 然后再重新设置一下中文字符的支持，运行<code>jekyll serve --watch</code>，终于没有错误了，而且更新的内容server也可以自动regenerate了：
 
 <p><img src="/images/local-jekyll/git_blog_4.jpg" width="90%" /></p>
+
+最后历经了多番磨砺终于可以在浏览器里通过<code>http://localhost:4000</code>来访问本地的github blog了。
