@@ -65,12 +65,12 @@ D:\wamp\www\git_blog > jekyll serve
 如果发现找到的ruby源码里有些不一样，这是因为jekyll1.3.0源代码做出了一些修改：
 
 <pre>
-convertible.rb :
+convertible.rb : (路径: \Ruby\lib\ruby\gems\2.0.0\gems\jekyll-1.2.1\lib\jekyll\convertible.rb)
 #self.content = File.read_with_options(File.join(base, name),
 # merged_file_read_opts(opts))
 self.content = File.read_with_options(File.join(base, name),:encoding=>"utf-8")
 
-include.rb :
+include.rb : (路径: \Ruby\lib\ruby\gems\2.0.0\gems\jekyll-1.2.1\lib\jekyll\tags\include.rb)
 def source(file, context)
 #File.read_with_options(file, file_read_opts(context))
 File.read_with_options(file, :encoding=>"utf-8")
