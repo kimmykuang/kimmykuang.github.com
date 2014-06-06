@@ -9,11 +9,11 @@ description: 本地搭建一个Jekyll环境来测试和预览Github Blog，不�
 这里稍微记录一下在Windows平台安装配置Jekyll环境的过程和当中发生的问题。注意了，由于安装过程中发生了一些问题而且我也都记录了下来，所以本文不是一篇“教程”，直接照着我写的过程做的话是会绕点弯路的，但是修改起来也很简单，生命在于折腾嘛。
 
 ##配置ruby
-Jekyll是用ruby写的，所以先要配置ruby环境，由于我是初次接触ruby环境而且不是在Linux下，所以就不用二进制编译的方式了，直接下载ruby的安装包<a href="http://rubyinstaller.org" target="_blank">RubyInstaller</a>来配置了，我将其安装在<code>D:\ruby</code>路径下。记得安装的时候选上“Add Ruby executables to your PATH”（添加系统环境变量）。
+Jekyll是用ruby写的，所以先要配置ruby环境，由于我是初次接触ruby环境而且不是在Linux下，所以就不用二进制编译的方式了，直接下载ruby的安装包<a href="http://rubyinstaller.org" target="_blank">RubyInstaller</a>来配置了，我将其安装在`D:\ruby`路径下。记得安装的时候选上“Add Ruby executables to your PATH”（添加系统环境变量）。
 
-然后下载<a href="http://rubyinstaller.org/downloads/" target="_blank">Devkit</a>，这个是在win下安装环境必须要的开发配置，我将其解压在<code>D:\devkit</code>路径下。
+然后下载<a href="http://rubyinstaller.org/downloads/" target="_blank">Devkit</a>，这个是在win下安装环境必须要的开发配置，我将其解压在`D:\devkit`路径下。
 
-解压好后打开<code>cmd</code>，进入到devkit目录下，输入：
+解压好后打开cmd，进入到devkit目录下，输入：
 <pre>
 D:\devkit > ruby dk.rb init
 D:\devkit > ruby dk.rb install
@@ -22,7 +22,7 @@ D:\devkit > ruby dk.rb install
 没有出现错误提示的话就表明配置成功了。
 
 ##安装Jekyll
-使用<code>gem</code>命令安装Jekyll，注意：修改gem命令代码源为<a href="http://ruby.taobao.org" target="_blank">ruby.taobao.org</a>，修改gem命令的代码源地址：
+使用`gem`命令安装Jekyll，注意：修改gem命令代码源为<a href="http://ruby.taobao.org" target="_blank">ruby.taobao.org</a>，修改gem命令的代码源地址：
 <pre>
 $ gem sources --remove https://rubygems.org/
 $ gem sources -a http://ruby.taobao.org/
@@ -43,12 +43,12 @@ $ jekyll -v
 jekyll 1.4.3
 </pre>
 
-[注意]：当前默认的jekyll版本是1.4.3，其实这个版本是有点问题的，反正我安装后运行<code>jekyll serve</code>总是提示莫名格式错误，所以到这里还没有结束呢，请继续看下去。
+[注意]：当前默认的jekyll版本是1.4.3，其实这个版本是有点问题的，反正我安装后运行`jekyll serve`总是提示莫名格式错误，所以到这里还没有结束呢，请继续看下去。
 
 ##本地调试
 安装好jekyll后就可以开始在本地搭建一个jekyll站点了，只要站点目录符合jekyll的基本结构。关于这部分内容可以参见我的另一篇文章：<a href="/github-blog.html" target="_blank">使用Github Pages建立个人博客</a> 中关于Jekyll模板系统的介绍。
 
-我本地的jekyll站点目录在<code>D:\wamp\www\git_blog</code>路径下，而且目录都已经配置好，所以直接开启ekyll自带的server：
+我本地的jekyll站点目录在`D:\wamp\www\git_blog`路径下，而且目录都已经配置好，所以直接开启ekyll自带的server：
 
 <pre>
 D:\wamp\www\git_blog > jekyll serve
@@ -77,13 +77,13 @@ File.read_with_options(file, :encoding=>"utf-8")
 end
 </pre>
 
-解决了中文支持的情况后，再运行<code>jekyll serve</code>出现：
+解决了中文支持的情况后，再运行`jekyll serve`出现：
 
 <p><img src="/images/local-jekyll/git_blog_3.jpg" width="90%" /></p>
 
 好像没什么问题了嘛，不！
 
-不知道为什么，<code>jekyll serve --auto/-w/--watch</code>（使jekyll默认自动regenerate的参数，否则本地修改了每次都要重新开启jekyll serve，实在太麻烦）都不行，继续上Stackoverflow上查看问题，发现他们都是建议安装jekyll的稳定版本1.2.1而非更高版本，所以我就只有去掉当前的1.4.2再安装1.2.1了，比较坑。。
+不知道为什么，`jekyll serve --auto/-w/--watch`（使jekyll默认自动regenerate的参数，否则本地修改了每次都要重新开启jekyll serve，实在太麻烦）都不行，继续上Stackoverflow上查看问题，发现他们都是建议安装jekyll的稳定版本1.2.1而非更高版本，所以我就只有去掉当前的1.4.2再安装1.2.1了，比较坑。。
 
 <pre>
 D:\wamp\www\git_blog > gem uninstall jekyll
@@ -91,8 +91,15 @@ D:\wamp\www\git_blog > gem install jekyll -v 1.2.1
 #指定版本为1.2.1
 </pre>
 
-然后再重新设置一下中文字符的支持，运行<code>jekyll serve --watch</code>，终于没有错误了，而且更新的内容server也可以自动regenerate了：
+然后再重新设置一下中文字符的支持，运行`jekyll serve --watch`，终于没有错误了，而且更新的内容server也可以自动regenerate了：
 
 <p><img src="/images/local-jekyll/git_blog_4.jpg" width="90%" /></p>
 
-最后历经了多番磨砺终于可以在浏览器里通过<code>http://localhost:4000</code>来访问本地的github blog了。
+`$ jekyll --pygments --safe`
+
+现在执行这条命令，就会将整个网站创建在目录 _site 下。
+如果没有安装 Apache 等 Web服务器，还可以使用 Jekyll 的内置 Web服务器。
+
+`$ jekyll --server --auto`
+
+默认在端口4000开启 Web服务器，访问 http://localhost:4000 即可。
