@@ -3,6 +3,7 @@ permalink: /:title.html
 auto: true
 markdown: rdiscount
 paginate: 10
+highlighter: pygments
 
 
 author: KimmyKuang
