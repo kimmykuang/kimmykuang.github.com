@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: 本地Jekyll环境的搭建
 category: blog
 description: 本地搭建一个Jekyll环境来测试和预览Github Blog，不用再去一次次地提交到远程github代码仓库上去。

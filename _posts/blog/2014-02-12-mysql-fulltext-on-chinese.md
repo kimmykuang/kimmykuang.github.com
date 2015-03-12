@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: MySQL数据库中文全文检索
 category: blog
 description: MySQL对于英文的全文检索可以很方便地用SELECT..MATCH..AGAINST语句，但是对于不以空格分隔的中文词语，MySQL一直以来都是不支持的，所以需要有一种方法来对中文进行分词，再对分词的数据进行全文检索。

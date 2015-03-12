@@ -1,27 +1,28 @@
 ---
-layout: default
+layout: home
 ---
 
-<header>
-    <div class="container">
-        <h1>Kimmykuang.github.com</h1>
-        <h2>KimmyKuang&#39;s blog</h2>
+<div class="index-content blog">
+    <div class="section">
+        <ul class="artical-cate">
+            <li class="on"><a href="/"><span>Blog</span></a></li>
+            <!--
+            <li style="text-align:center"><a href="/opinion"><span>Opinion</span></a></li>
+            <li style="text-align:right"><a href="/project"><span>Project</span></a></li>
+            -->
+        </ul>
 
-        <section id="downloads">
-          <a href="https://github.com/kimmykuang" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-    </div>
-</header>
+        <div class="cate-bar"><span id="cateBar"></span></div>
 
-<div class="index_content container">
-    <section>
-        <ul class="article_list">
-        {% for post in site.posts %}
+        <ul class="artical-list">
+        {% for post in site.categories.blog %}
             <li>
-                <h2 class="article_title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                <div class="article_desc">{{ post.description }}</div>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="title-desc">{{ post.description }}</div>
             </li>
         {% endfor %}
         </ul>
-    </section>
+    </div>
+    <div class="aside">
+    </div>
 </div>
