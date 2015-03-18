@@ -50,7 +50,16 @@ $(document).ready(function(){
     });
 
     (function(){
-        var ie6 = ($.browser.msie && $.browser.version=="6.0") ? true : false;
+
+        //if ie6
+        var ie6 = false;
+        if(/msie/.test(navigator.userAgent.toLowerCase())) {
+            if($.browser && $.browser.version && $.browser.version == "6.0") {
+                ie6 = true;
+            } else if(!$.support.leadingWhitespace) {
+                ie6 = true;
+            }
+        }
 
         function initHeading(){
             var h2 = [];
