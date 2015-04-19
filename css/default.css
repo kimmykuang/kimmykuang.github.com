@@ -68,6 +68,8 @@ pre ol{margin-left:25px;list-style-type:decimal;}
 .entry ol{margin-bottom:25px;margin-left:25px;}
 .entry ol li{margin-bottom:5px;list-style:decimal;line-height:1.1em;}
 .entry blockquote{margin-left:25px;font-size:14px;font-style:italic}
+.entry blockquote p{margin-bottom:10px;}
+.entry blockquote p:last-child{margin-bottom:40px;}
 .entry img{max-width:670px;display:block;margin:10px auto;}
 
 
