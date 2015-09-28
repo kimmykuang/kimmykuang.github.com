@@ -37,4 +37,6 @@ description: homebrew安装php扩展
 
 ```sudo cp /usr/local/homebrew/Cellar/php55-mcrypt/5.5.29/mcrypt.so  /usr/lib/php/extensions/no-debug-non-zts-20121212/```
 
+```修改php.ini，添加extension=/usr/lib/php/extensions/no-debug-non-zts-20121212/mcrypt.so```
+
 重启php-fpm & nginx，打印下看看```php -m | grep mcrypt```，ok，搞定。
