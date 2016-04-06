@@ -6,9 +6,9 @@ tag: laravel, 源码解析, 学习笔记
 description: 公司的后端技术栈中有用到Laravel (5.0.14)，通过分析框架的源代码，可以了解这个框架的设计思想和实现技巧，这样更有助于写出“最佳laravel实践”的代码。
 ---
 
-##laravel框架学习
+## laravel框架学习
 
-###一. laravel官方文档系统架构篇阅读
+### 一. laravel官方文档系统架构篇阅读
 
 #### serviceprovider 服务提供者
 
