@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用homebrew安装php扩展mcrypt
+title: 使用homebrew安装php扩展
 category: blog
 tag: homebrew, php扩展
 description: homebrew安装php扩展

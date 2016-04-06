@@ -1,8 +1,10 @@
 baseurl: /
 permalink: /:title.html
-auto: true
+#auto: true
 markdown: rdiscount
 paginate: 10
+paginate_path: "page:num"
+gem: [jekyll-paginate]
 highlighter: pygments
 
 
