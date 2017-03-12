@@ -1,10 +1,3 @@
----
-layout: post
-title: 简历
-category: articles
-tag: article
----
-
 ## 联系方式
 
 - 手机：136 2181 9385
