@@ -47,9 +47,9 @@ description: Lumen框架因为精简的关系某些功能是没有实现的，�
 
 如果传了参数则首先尝试从`[your_project_root]/config`目录下寻找{$name}.php，找不到再从`vendor/laravel/lumen-framework/config`目录下找，也就是说这里是不支持目录嵌套的。
 
-可以看下[Laravel的config加载实现](https://github.com/laravel/framework/blob/5.0/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php), Laravel是在Application boot的时候执行了`LoadConfiguration::bootstrap`，我看了下Lumen好像都把几个component booter都去掉了。
+可以看下[Laravel的config加载实现](https://github.com/laravel/framework/blob/5.0/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php), Laravel是在Application boot的时候执行了`LoadConfiguration::bootstrap`，看了下Lumen好像都把几个component booter都去掉了。
 
-我觉得不能嵌套config目录不太好，就写了一个`app/Providers/ConfigServiceProvider.php`，将其在`bootstrap/app.php`中注册一下: `$app->register(App\Providers\ConfigServiceProvider::class);`，下面是这个ServiceProvider的实现: 
+个人觉得不能嵌套config目录不太好，就写了一个`app/Providers/ConfigServiceProvider.php`，将其在`bootstrap/app.php`中注册一下: `$app->register(App\Providers\ConfigServiceProvider::class);`，下面是这个ServiceProvider的实现: 
 
 ```php
 <?php

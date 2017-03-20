@@ -9,7 +9,7 @@
 
  - 匡锡斌 / 男 / 1990
  - 本科,工学学士 / 上海华东师范大学计算机科学与技术系 / 2008.09 - 2012.07
- - 工作年限：四年
+ - 工作年限：五年
  - 技术博客：[https://kimmykuang.github.io](https://kimmykuang.github.io)
  - Github：[https://github.com/kimmykuang](https://github.com/kimmykuang)
  - 求职意向：资深开发相关岗位，具有技术挑战；或可接受转型，对团队比较挑剔，对的人决定对的事，持续做对的事可以聚拢更多对的人
