@@ -3,7 +3,7 @@ layout: post
 title: 我所经历过的项目流程与痛点
 category: blog
 tag: 项目管理, 流程
-description: 
+description: 在反思中前行
 ---
 
 ### 我所经历过的项目流程
